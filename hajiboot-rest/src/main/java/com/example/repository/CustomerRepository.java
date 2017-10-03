@@ -9,5 +9,5 @@ import com.example.domain.Customer;
 
 public interface CustomerRepository extends JpaRepository<Customer,Integer>{
 	@Query("SELECT x FROM Customer x ORDER BY x.firstName,x.lastName")
-	List<Customer> findAllOrderByName();
+	List<Customer> findAllOrderByName(Pageable pageable);
 }
