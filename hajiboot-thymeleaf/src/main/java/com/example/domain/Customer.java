@@ -1,22 +1,23 @@
 package com.example.domain;
-import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "customers")
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "customers")
 public class Customer {
-	@Id
-	@GeneratedValue
-	private Integer id;
-	@Column(nullable = false)
-	private String firstName;
-	@Column(nullable = false)
-	private String lastName;
-
+    @Id
+    @GeneratedValue
+    private Integer id;
+    private String firstName;
+    private String lastName;
 }
